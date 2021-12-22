@@ -1,23 +1,3 @@
-<?php 
-
-function nav_item(string $lien, string $titre): string {
-  $classe = 'nav-link';
-  if($_SERVER["SCRIPT_NAME"] === $lien){
-    $classe = $classe . " active";
-  }
-
-  $html = <<<HTML
-  <li class="nav-item">
-    <a class="$classe" aria-current="page" href="$lien">$titre</a>
-  </li>
-  HTML;
-
-  return $html;
-
-};
-
-?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -48,8 +28,7 @@ function nav_item(string $lien, string $titre): string {
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <?= nav_item('/index.php', 'Accueil'); ?>
-        <?= nav_item('/contact.php', 'Contact'); ?>
+        <?php require './functions/menu.php' ?>
       </ul>
     </div>
   </div>
