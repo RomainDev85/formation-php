@@ -1,3 +1,8 @@
+<?php
+if(session_status() === PHP_SESSION_NONE){
+  session_start();
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -27,8 +32,13 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav mr-auto">
         <?php require './functions/menu.php' ?>
+      </ul>
+      <ul class="navbar-nav">
+        <?php if(!empty($_SESSION['user']) && $_SESSION['user'] === 1): ?>
+          <li class="nav-item"><a href="/functions/logout.php" class="nav-link">Se déconnecter</a></li>
+        <?php endif ?>
       </ul>
     </div>
   </div>

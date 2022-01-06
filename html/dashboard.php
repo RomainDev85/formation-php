@@ -1,4 +1,10 @@
 <?php
+if(session_status() === PHP_SESSION_NONE){
+  session_start();
+}
+if(empty($_SESSION) || $_SESSION['user'] !== 1){
+  header('Location: /login.php');
+}
 require 'functions/compteur.php';
 $annee = (int)date('Y');
 $annee_selection = empty($_GET['annee']) ? null : (int)$_GET['annee'];
@@ -9,6 +15,7 @@ if($annee_selection && $mois_selection){
 } else {
   $total = nombre_vues();
 };
+
 $mois = [
   '01' => 'Janvier',
   '02' => 'Février',
@@ -25,6 +32,7 @@ $mois = [
 ];
 require 'components/header.php';
 ?>
+
 
 <div class="row m-4">
   <div class="col-md-4">
