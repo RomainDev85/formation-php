@@ -1,5 +1,6 @@
 <?php
 require '../html/class/Creneau.php';
+require '../html/class/Form.php';
 
 // $date = new DateTime(); // instancie un objet
 // echo $date->format('d/m/Y'); // utilise une méthode
@@ -23,6 +24,9 @@ require '../html/class/Creneau.php';
 
 $creneau = new Creneau(9, 12);
 $creneau2 = new Creneau(14, 17);
-var_dump($creneau->inclusHeure(10));
-var_dump($creneau2->inclusHeure(10));
-var_dump($creneau->interesect($creneau2));
+// var_dump($creneau->inclusHeure(10));
+// var_dump($creneau2->inclusHeure(10));
+// var_dump($creneau->interesect($creneau2));
+
+echo Form::checkbox('demo', 'Demo', []);
+echo Form::$class;
