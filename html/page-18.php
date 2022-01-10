@@ -1,4 +1,6 @@
 <?php
+phpinfo();
+die();
 $age = null;
 if(!empty($_COOKIE['age'])){
   $age = (int)$_COOKIE['age'];
