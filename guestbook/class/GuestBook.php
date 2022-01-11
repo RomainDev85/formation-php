@@ -1,4 +1,8 @@
 <?php
+namespace GuestBook;
+
+use \DateTime;
+
 require_once 'Message.php';
 class GuestBook {
   

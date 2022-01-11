@@ -2,11 +2,14 @@
 require 'class/Message.php';
 require 'class/GuestBook.php';
 
+use \GuestBook\GuestBook;
+use \GuestBook\Message;
+
 $file = dirname(__DIR__) . DIRECTORY_SEPARATOR . "guestbook" . DIRECTORY_SEPARATOR . "data" . DIRECTORY_SEPARATOR . "message";
 $guestbook = new GuestBook($file);
 $success = false;
 
-if($_POST['user'] && $_POST['message']){
+if(isset($_POST['user']) && isset($_POST['message'])){
   $user = $_POST['user'];
   $content = $_POST['message'];
   $message = new Message($user, $content, new DateTime());

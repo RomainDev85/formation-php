@@ -1,4 +1,8 @@
 <?php
+namespace GuestBook;
+
+use \DateTime;
+use \DateTimeZone;
 
 class Message {
 
