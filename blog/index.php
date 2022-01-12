@@ -1,5 +1,4 @@
 <?php
-require_once 'class/Post.php';
 $pdo = new PDO('sqlite:./data/data.db', null, null, [
   PDO::ATTR_ERRMODE => PDO:: ERRMODE_EXCEPTION,
   PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
@@ -15,7 +14,7 @@ try {
     ]);
   }
   $query = $pdo->query('SELECT * FROM posts');
-  $posts = $query->fetchAll(PDO::FETCH_CLASS, '\Blog\Post');
+  $posts = $query->fetchAll(PDO::FETCH_CLASS, 'Post');
 } catch(Exception $e) {
   $error = $e->getMessage();
 }

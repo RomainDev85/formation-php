@@ -1,0 +1,1 @@
+<h2>Article <?= $params['slug'] ?>, numero <?= $params['id'] ?></h2>

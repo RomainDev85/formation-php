@@ -1,0 +1,13 @@
+{
+    "name": "romai/organisation-php",
+    "authors": [
+        {
+            "name": "Romain85340",
+            "email": "64895507+Romain85340@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "altorouter/altorouter": "^2.0",
+        "symfony/var-dumper": "^6.0"
+    }
+}

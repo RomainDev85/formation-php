@@ -1,0 +1,12 @@
+{
+    "name": "romai/tableau-dynamique",
+    "authors": [
+        {
+            "name": "Romain85340",
+            "email": "64895507+Romain85340@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "^6.0"
+    }
+}

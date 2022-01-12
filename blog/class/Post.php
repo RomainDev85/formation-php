@@ -1,6 +1,4 @@
 <?php
-namespace Blog;
-
 class Post {
 
   public int $id;
@@ -11,10 +9,10 @@ class Post {
   public function __construct()
   {
     if(is_int($this->created_at)){
-      $this->created_at = new \DateTime('@' . $this->created_at);
+      $this->created_at = new DateTime('@' . $this->created_at);
     }
     if(is_null($this->created_at)){
-      $this->created_at = new \DateTime();
+      $this->created_at = new DateTime();
     }
   }
 
@@ -22,6 +20,4 @@ class Post {
   {
     return substr($this->content, 0, 150);
   }
-
-
 }
